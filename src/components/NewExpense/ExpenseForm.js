@@ -29,9 +29,10 @@ const ExpenseForm = (props) => {
 
     setValue({title: "", amount: "", date: ""});
   }
+
   return (
     <form onSubmit={handleSubmit}>
-      <div className="new-expense__controls">
+       <div className="new-expense__controls">
         <div className="new-expense__controls">
           <label>Title</label>
           <input type="text" name="title" value={title} onChange={handleChange} />
@@ -45,7 +46,10 @@ const ExpenseForm = (props) => {
           <input type="date" nim="2019-01-01" max="2021-12-31" name="date" value={date} onChange={handleChange} />
         </div>
       </div>
-      <button className="new-expense__actions">Add Expense</button>
+      <div className="new-expense__actions">
+        <button type="button" onClick={props.onCancel}>Cancel</button>
+        <button type="submit">New Expense</button>
+      </div>
     </form>
   );
 };
