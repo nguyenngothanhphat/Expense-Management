@@ -21,7 +21,8 @@ const ExpenseForm = (props) => {
     
     const dataExpense = {
       title: title,
-      amount: amount,
+      amount: +amount, // Cách 1 chuyển chuỗi thành số
+      /* amount: parseInt(amount) */ // Cách 2 chuyển chuỗi thành số 
       date: new Date(date)
     }
 

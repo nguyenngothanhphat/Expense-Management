@@ -12,7 +12,7 @@ const NewExpense = (props) => {
                   id: Math.random().toString(),
                   ...enteredExpenseData,          
             }
-            props.onAddExpense(expenseData);
+            props.onAddExpense(expenseData);         
       }
 
       const startEditingHandler = () => {
